@@ -6,7 +6,7 @@
     <ul>
         {% for item in config.extra.lists.connect %}
         <li>
-            <a href="{{ item.url }}">{{ item.text }}</a>
+            <a href="{{ item.url }}" {% if item.new_tab %}target="_blank"{% endif %}>{{ item.text }}</a>
         </li>
         {% endfor %}
     </ul>
@@ -22,7 +22,7 @@
     <ul>
         {% for item in config.extra.lists.social %}
         <li>
-            <a href="{{ item.url }}">{{ item.text }}</a>
+            <a href="{{ item.url }}" {% if item.new_tab %}target="_blank"{% endif %}>{{ item.text }}</a>
         </li>
         {% endfor %}
     </ul>
